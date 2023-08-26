@@ -1,0 +1,42 @@
+.splash-screen {
+    background: var(--bgColor);
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-screen h1 {
+    font-size: 50px;
+    color: var(--textColor);
+
+    animation: splashContentAnim forwards;
+    user-select: none;
+}
+
+
+@keyframes splashContentAnim {
+
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    10%,
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}

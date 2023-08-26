@@ -1,0 +1,47 @@
+.role-changer-component {
+    display: flex;
+    width: fit-content;
+}
+
+.role-text {
+    display: flex;
+}
+.role-container{
+    width: 100px;
+}
+.role {
+    transition: all .5s;
+    margin-left: 5px;
+    position: absolute;
+}
+
+.role.in {
+    animation: roleInAnim .5s forwards;
+}
+
+.role.out {
+    animation: roleOutAnim .5s forwards;
+}
+
+@keyframes roleInAnim {
+    from{
+        display: none;
+        opacity: 0;
+        transform: translateY(20px);
+    }to{
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes roleOutAnim {
+    from{
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }to{
+        display: none;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}

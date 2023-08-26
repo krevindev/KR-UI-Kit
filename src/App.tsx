@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SplashScreen from './components/splash_screen/SplashScreen';
+import './global_styles/App.css';
 
-function App() {
+import { useState, useEffect } from 'react';
+import LandingPage from './pages/landing_page/LandingPage';
+
+import { useGlobalContext } from './hooks/GlobalContext';
+import { Themes } from './global_types/globalEnums';
+
+const App: React.FC = () => {
+
+  const { theme, isSplash } = useGlobalContext();
+  const isDark: boolean = theme == Themes.dark;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='App' className={isDark ? 'dark' : 'light'}>
+      {
+        isSplash ? <SplashScreen /> : <LandingPage />
+      }
     </div>
-  );
-}
+  )
+};
 
 export default App;

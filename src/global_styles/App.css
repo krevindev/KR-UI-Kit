@@ -1,0 +1,10 @@
+#App {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+#App.dark {
+    --baseColor: #b349ff;
+    --bgColor: #232323;
+    --textColor: #8800ff;
+}

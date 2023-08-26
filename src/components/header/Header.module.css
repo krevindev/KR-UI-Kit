@@ -1,0 +1,48 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    height: 50px;
+    width: 100%;
+
+    padding-left: 2%;
+
+    background: var(--baseColor);
+
+    animation: headerIn .5s forwards ease-out;
+
+    transform: translateY(-50px);
+    opacity: 0;
+
+    z-index: 99;
+
+    color: white;
+
+    box-sizing: border-box;
+}
+
+.header.out {
+    background: green;
+}
+
+@keyframes headerIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes headerOut {
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

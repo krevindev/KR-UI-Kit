@@ -17,9 +17,15 @@
 
     z-index: 99;
 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+
     color: white;
 
     box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
 }
 
 .header.out {
@@ -31,16 +37,19 @@
         transform: translateY(-50px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
+
 @keyframes headerOut {
     to {
         transform: translateY(-50px);
         opacity: 0;
     }
+
     from {
         transform: translateY(0);
         opacity: 1;

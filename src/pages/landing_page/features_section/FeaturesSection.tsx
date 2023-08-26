@@ -7,6 +7,8 @@ import AlienBreach from '../../../featured_components/alien_breach/AlienBreach';
 import styles from './FeaturesSection.module.css';
 import { ReactNode } from 'react';
 
+import gearIcon from '../../../res/icons/gear-icon.svg';
+
 interface FeaturesSectionProps {
     id?: string,
     className?: string,
@@ -36,7 +38,8 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ id, className }) => {
                 </FeaturedContainer>
 
                 <div id='add-more'>
-                    Adding More
+                    Constructing More
+                    <img src={gearIcon} />
                 </div>
             </div>
         </div >

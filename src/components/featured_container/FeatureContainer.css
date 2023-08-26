@@ -37,6 +37,22 @@
 
     background: var(--baseColor);
     color: white;
+
+    user-select: none;
+}
+#add-more img{
+    height: 50%;
+    margin: 5px;
+
+    animation: rotatingGearAnim .5s infinite linear;
+}
+
+@keyframes rotatingGearAnim {
+   0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
 }
 
 .features {

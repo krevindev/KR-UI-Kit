@@ -44,7 +44,7 @@
     height: 50%;
     margin: 5px;
 
-    animation: rotatingGearAnim .5s infinite linear;
+    animation: rotatingGearAnim 3s infinite linear;
 }
 
 @keyframes rotatingGearAnim {

@@ -29,6 +29,10 @@
     height: 50px;
     width: 200px;
 
+    margin: auto 0;
+    width: 100vw;
+
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +44,8 @@
 
     user-select: none;
 }
-#add-more img{
+
+#add-more img {
     height: 50%;
     margin: 5px;
 
@@ -48,9 +53,11 @@
 }
 
 @keyframes rotatingGearAnim {
-   0%{
+    0% {
         transform: rotate(0deg);
-    }100%{
+    }
+
+    100% {
         transform: rotate(360deg);
     }
 }

@@ -8,11 +8,20 @@ import styles from './FeaturesSection.module.css';
 import { ReactNode } from 'react';
 
 import gearIcon from '../../../res/icons/gear-icon.svg';
+import Component5 from '../../../components/component5/Component5';
 
 interface FeaturesSectionProps {
     id?: string,
     className?: string,
 }
+
+const Component5Data = [
+    { iconSrc: gearIcon, title: 'Web Development' },
+    { iconSrc: gearIcon, title: 'UI/UX Design' },
+    { iconSrc: gearIcon, title: 'Web Scraping' },
+    { iconSrc: gearIcon, title: 'Digital Arts' },
+    { iconSrc: gearIcon, title: 'Other Services' },
+]
 
 const FeaturesSection: React.FC<FeaturesSectionProps> = ({ id, className }) => {
 
@@ -35,6 +44,10 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ id, className }) => {
                 </FeaturedContainer>
                 <FeaturedContainer>
                     <AlienBreach text='Breach Effect' speed={0.02} infinite={true} />
+                </FeaturedContainer>
+
+                <FeaturedContainer>
+                    <Component5 data={Component5Data} />
                 </FeaturedContainer>
 
                 <div id='add-more'>

@@ -1,0 +1,60 @@
+.component-5 {
+    width: 90%;
+    height: 170px;
+
+    display: flex;
+
+    box-sizing: border-box;
+}
+
+.c5-item {
+    width: 3%;
+    flex-grow: 1;
+    border: 1px solid var(--textColor);
+
+    transition: flex-grow .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.c5-item:hover {
+    flex-grow: 10;
+}
+
+.c5-item .c5-collapsed-title {
+    transition: opacity .5s ease;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    align-items: center;
+
+    height: 100%;
+}
+
+.c5-item h5 {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+.c5-item:not(.c5-item:hover) h5 {
+    display: none;
+}
+
+.c5-item:hover .c5-collapsed-title {
+    opacity: 0;
+}
+
+.c5-item .c5-collapsed-title img {
+    width: 10px;
+    margin: 5px;
+}
+
+.c5-item span {
+    max-width: 100%;
+    font-size: 10px;
+    writing-mode: vertical-lr;
+}
